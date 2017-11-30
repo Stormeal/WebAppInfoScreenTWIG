@@ -5,15 +5,12 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/font-awesome/less" />
       <path value="$PROJECT_DIR$/vendor/font-awesome/scss" />
       <path value="$PROJECT_DIR$/vendor/font-awesome/fonts" />
       <path value="$PROJECT_DIR$/vendor/font-awesome/css" />
       <path value="$PROJECT_DIR$/vendor/bootstrap/js" />
-      <path value="$PROJECT_DIR$/vendor/bootstrap/fonts" />
       <path value="$PROJECT_DIR$/vendor/bootstrap/css" />
     </include_path>
   </component>
