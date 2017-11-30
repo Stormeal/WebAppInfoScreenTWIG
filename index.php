@@ -24,7 +24,7 @@
 
                     <div class="collapse navbar-collapse" id="myContent">
                         <div class="navbar-nav mr-auto ml-3">
-                            <a class="nav-link active nav-item" href="index.html">Home</a>
+                            <a class="nav-link active nav-item" href="index.php">Home</a>
                             <a class="nav-link active nav-item disabled" href="#">Rooms</a>
                             <a class="nav-link disabled nav-item disabled" href="#">About Us</a>
                             <a class="nav-link disabled nav-item disabled" href="#">Settings</a>
@@ -39,12 +39,6 @@
                 </div> <!--Container-->
             </nav>
         </section>
-        <section>
-            <form action="controllers/VejrData.php" method="get">
-                Get Vejr info for Roskilde:<br>
-                <input type="submit" name="Se Vejrdata for Roskilde"><br><br><br>
-            </form>
-        </section>
     </div>
 
 
@@ -56,10 +50,24 @@
 </div><!-- CONTAINER-->
 
 <div class="container">
-    <form action="controllers/VejrData.php" method="post">
-        Get Vejr info for Roskilde:<br>
-        <input type="submit" name="Se Vejrdata for Roskilde"><br><br><br>
-    </form>
+    <section style="margin: 64px">
+        <?php
+        $api = "http://api.openweathermap.org/data/2.5/weather?id=2614478&APPID=651c5fed00811436ea7544bf41e0a32c";
+        $test = file_get_contents($api);
+        $convertToAssociativeArray = true;
+        $weather = json_decode($test, $convertToAssociativeArray);
+
+        $weatherStatus = $weather["weather"][0]["main"];
+
+        require_once 'vendor/autoload.php';
+        Twig_Autoloader::register();
+        $loader = new Twig_Loader_Filesystem('views');
+        $twig = new Twig_Environment($loader, array('auto_reload' => true));
+        $template = $twig->loadTemplate('VejrDataTwig.html.twig');
+        $parametersToTwig = array("weatherStatus" => $weatherStatus);
+        echo $template->render($parametersToTwig);
+        ?>
+    </section>
 </div><!-- Nicki -->
 
 
