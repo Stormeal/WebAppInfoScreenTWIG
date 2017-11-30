@@ -1,3 +1,7 @@
+<?php
+require ('controllers/VejrData.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +28,7 @@
 
                     <div class="collapse navbar-collapse" id="myContent">
                         <div class="navbar-nav mr-auto ml-3">
-                            <a class="nav-link active nav-item" href="index.html">Home</a>
+                            <a class="nav-link active nav-item" href="index.php">Home</a>
                             <a class="nav-link active nav-item disabled" href="#">Rooms</a>
                             <a class="nav-link disabled nav-item disabled" href="#">About Us</a>
                             <a class="nav-link disabled nav-item disabled" href="#">Settings</a>
@@ -51,7 +55,9 @@
 
 <div class="container">
     <section style="margin: 64px">
-
+            <?php
+                VejrData();
+            ?>
     </section>
 </div><!-- Nicki -->
 

@@ -21,9 +21,9 @@ function VejrData()
     $weatherTotal[1] = $weatherStatus;
     $weatherTotal[2] = $weatherTownName;
 
-    require_once '../vendor/autoload.php';
+    require_once 'vendor/autoload.php';
     Twig_Autoloader::register();
-    $loader = new Twig_Loader_Filesystem('../views');
+    $loader = new Twig_Loader_Filesystem('views');
     $twig = new Twig_Environment($loader, array('auto_reload' => true));
     $template = $twig->loadTemplate('VejrDataTwig.html.twig');
     $parametersToTwig = array("weatherTotal" => $weatherTotal);
