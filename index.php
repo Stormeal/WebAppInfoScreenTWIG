@@ -1,5 +1,6 @@
 <?php
 require ('controllers/VejrData.php');
+require ('controllers/DateTime.php');
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +64,9 @@ require ('controllers/VejrData.php');
 
 <div>
     <section style="margin: 200px">
-
+<?php
+DateTime();
+?>
     </section>
 </div><!-- Frede -->
 
