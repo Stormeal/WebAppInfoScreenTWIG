@@ -1,3 +1,8 @@
+<?php
+require ('controllers/VejrData.php');
+require ('controllers/DateTime.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +29,7 @@
 
                     <div class="collapse navbar-collapse" id="myContent">
                         <div class="navbar-nav mr-auto ml-3">
-                            <a class="nav-link active nav-item" href="index.html">Home</a>
+                            <a class="nav-link active nav-item" href="index.php">Home</a>
                             <a class="nav-link active nav-item disabled" href="#">Rooms</a>
                             <a class="nav-link disabled nav-item disabled" href="#">About Us</a>
                             <a class="nav-link disabled nav-item disabled" href="#">Settings</a>
@@ -44,17 +49,27 @@
 
 
 
-<!-- NF Making push to git testytest -->
+    <!-- NF Making push to git testytest -->
 
 
 </div><!-- CONTAINER-->
 
 <div class="container">
-    <form action="controllers/VejrData.php" method="post">
-        Get Vejr info for roskilde:<br>
-        <input type="submit" name="Se Vejrdata for Roskilde"><br><br><br>
-    </form>
+    <section style="margin: 64px">
+        <?php
+                VejrData();
+            ?>
+    </section>
 </div><!-- Nicki -->
+
+<div>
+    <section style="margin: 200px">
+        <?php
+DateTime();
+?>
+    </section>
+</div><!-- Frede -->
+
 
 
 <script src="js/jquery.slim.min.js"></script>
