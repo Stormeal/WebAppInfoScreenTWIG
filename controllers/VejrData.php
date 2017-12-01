@@ -12,7 +12,7 @@ function VejrData()
     echo "<pre>";
     print_r($weather);
     echo "</pre>";
-*/
+    */
 
 
     $weatherTemperature = $weather["main"]["temp"];
