@@ -5,21 +5,24 @@ function VejrData()
     $test = file_get_contents($api);
     $convertToAssociativeArray = true;
     $weather = json_decode($test, $convertToAssociativeArray);
+    $weatherStatusFront = "//openweathermap.org/img/w/";
+    $weatherStatusBack = ".png";
 
     /*
     echo "<pre>";
     print_r($weather);
     echo "</pre>";
-    */
+*/
+
 
     $weatherTemperature = $weather["main"]["temp"];
-    $weatherStatus = $weather["weather"][0]["main"];
+    $weatherStatusIcon = $weather["weather"][0]["icon"];
     $weatherTownName = $weather["name"];
     $weatherTemperature -= 273.15;
 
     $weatherTotal[0] = $weatherTemperature;
-    $weatherTotal[1] = $weatherStatus;
     $weatherTotal[2] = $weatherTownName;
+    $weatherTotal[3] = $weatherStatusFront . $weatherStatusIcon . $weatherStatusBack;
 
     require_once 'vendor/autoload.php';
     Twig_Autoloader::register();
