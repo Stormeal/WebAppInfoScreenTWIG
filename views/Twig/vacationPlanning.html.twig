@@ -15,75 +15,27 @@
     <!-- Custom styles for this template-->
     <link href="../../css/sb-admin.css" rel="stylesheet">
 
-    <style>
-        * {box-sizing: border-box;}
-        ul {list-style-type: none;}
-        body {font-family: Verdana, sans-serif;}
+    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css"/>
 
-        .month {
-            padding: 70px 25px;
-            width: 100%;
-            background: #1abc9c;
-            text-align: center;
+    <!--Font Awesome (added because you use icons in your prepend/append)-->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css"/>
+
+    <!-- Inline CSS based on choices in "Settings" tab -->
+    <style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
+            font-family: Arial, Helvetica, sans-serif;
+            color: black
         }
 
-        .month ul {
-            margin: 0;
-            padding: 0;
+        .bootstrap-iso form button, .bootstrap-iso form button:hover {
+            color: white !important;
         }
 
-        .month ul li {
-            color: white;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
+        .asteriskField {
+            color: red;
+        }</style>
 
-        .month .prev {
-            float: left;
-            padding-top: 10px;
-        }
 
-        .month .next {
-            float: right;
-            padding-top: 10px;
-        }
-
-        .weekdays {
-            margin: 0;
-            padding: 10px 0;
-            background-color: #ddd;
-        }
-
-        .weekdays li {
-            display: inline-block;
-            width: 13.6%;
-            color: #666;
-            text-align: center;
-        }
-
-        .days {
-            padding: 10px 0;
-            background: #eee;
-            margin: 0;
-        }
-
-        .days li {
-            list-style-type: none;
-            display: inline-block;
-            width: 13.6%;
-            text-align: center;
-            margin-bottom: 5px;
-            font-size:12px;
-            color: #777;
-        }
-
-        .days li .active {
-            padding: 5px;
-            background: #1abc9c;
-            color: white !important
-        }
-    </style>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -266,62 +218,126 @@
             </form>
 
 
-
-            <div class="month">
-                <ul>
-                    <li class="prev">&#10094;</li>
-                    <li class="next">&#10095;</li>
-                    <li>
-                        August<br>
-                        <span style="font-size:18px">2017</span>
-                    </li>
-                </ul>
+            <div class="container">
+                <span>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#servicesmodal">Plan
+                    Vacation
+                    </button>
+                </span>
             </div>
 
-            <ul class="weekdays">
-                <li>Mo</li>
-                <li>Tu</li>
-                <li>We</li>
-                <li>Th</li>
-                <li>Fr</li>
-                <li>Sa</li>
-                <li>Su</li>
-            </ul>
 
-            <ul class="days">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li><span class="active">10</span></li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
+            <div class="container">
+                <table class="table table-hover">
+                    <thread>
+                        <tr>
+                            <th class="col-md-2">#</th>
+                            <th class="col-md-2">State</th>
+                            <th class="col-md-2">Room</th>
+                            <th class="col-md-2">Day</th>
+                            <th class="col-md-2">Start Date</th>
+                            <th class="col-md-2">End Date</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                    <tr>
+                        <th></th>
+                        <td></td>
 
+                        <th></th>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><!-- Container -->
+            <br>
+            <br>
+            <br>
+
+
+            <div id="servicesmodal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Start planning your vacation</h4>
+                        </div>
+                        <div class="modal-body">
+
+                            <p>When planning your vacation it's important to keep in mind that big brothers eyes are
+                                always watching. You might think you're alone and safe, then we at INFOSCREEN™ will
+                                proove you wrong. By pressing the previous button you already accepted with your own
+                                content and we now own you.</p>
+                            <h5>Start Date</h5>
+
+                            <form class="form-inline" action="../../controllers/newVacation.php" method="post">
+                                <div class="bootstrap-iso">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <form method="post">
+                                                    <div class="form-group ">
+                                                        <label class="control-label " for="date">
+                                                            Date
+                                                        </label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-calendar">
+                                                                </i>
+                                                            </div>
+                                                            <input class="form-control" id="date" name="date"
+                                                                   placeholder="DD/MM/YYYY" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h5>End Date</h5>
+                                <div class="bootstrap-iso">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <form method="post">
+                                                    <div class="form-group ">
+
+                                                        <label class="control-label " for="date">
+                                                            Date
+                                                        </label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-addon">
+                                                                <i class="fa fa-calendar">
+                                                                </i>
+                                                            </div>
+                                                            <input class="form-control" id="date" name="date"
+                                                                   placeholder="DD/MM/YYYY" type="text"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="table-striped">
+                                    <tr>
+                                        <td><input class="form-control" type="number" name="State" placeholder="0 = Off - 1 = On"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="form-control dropdown" type="text" name="Room" placeholder="Select Room(s)"></td>
+                                    </tr>
+
+                                </table>
+
+
+                            </form>
+
+
+                        </div><!-- modal body-->
+                    </div><!-- modal content-->
+                </div> <!-- modal dialog-->
+            </div><!-- div Button -->
 
 
         </div>
@@ -368,6 +384,31 @@
 <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
 <!-- Custom scripts for all pages-->
 <script src="../../js/sb-admin.min.js"></script>
+
+
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+    $(document).ready(function () {
+        var date_input = $('input[name="date"]'); //our date input has the name "date"
+        var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'dd/mm/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
+</script>
+
 
 </body>
 
