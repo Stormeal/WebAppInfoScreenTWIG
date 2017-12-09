@@ -188,7 +188,7 @@
         <div class="row">
 
             <!-- Card #1 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -207,7 +207,7 @@
             <!-- /.Card #1 -->
 
             <!-- Card #2 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -226,7 +226,7 @@
             <!-- /.Card #2 -->
 
             <!-- /.Card #3 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -245,7 +245,7 @@
             <!-- /.Card #3 -->
 
             <!-- /.Card #4 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -264,7 +264,7 @@
             <!-- /.Card #4 -->
 
             <!-- /.Card #5 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -283,7 +283,7 @@
             <!-- /.Card #5 -->
 
             <!-- /.Card #6 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -302,7 +302,7 @@
             <!-- /.Card #6 -->
 
             <!-- /.Card #7 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -321,7 +321,7 @@
             <!-- /.Card #7 -->
 
             <!-- /.Card #8 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -340,7 +340,7 @@
             <!-- /.Card #8 -->
 
             <!-- /.Card #9 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -359,7 +359,7 @@
             <!-- /.Card #9 -->
 
             <!-- /.Card #10 -->
-            <div class="col-xl-2 col-sm-6 mb-3">
+            <div class="col-xl-3 col-sm-6 mb-3">
                 <div class="card text-white bg-info o-hidden h-100">
                     <div class="card-body">
                         <div class="card-body-icon">
@@ -426,6 +426,15 @@
     var dt = new Date();
     document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "." + (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (dt.getFullYear()) + " " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
 </script>
+<!-- Toggle between fixed and static navbar-->
+<script>
+    $('#toggleNavPosition').click(function() {
+        $('body').toggleClass('fixed-nav');
+        $('nav').toggleClass('fixed-top static-top');
+    });
+
+</script>
+
 </body>
 
 </html>

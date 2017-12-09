@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/bootstrap/css" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bootstrap/js" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/font-awesome/css" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/font-awesome/less" />
@@ -11,6 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -20,6 +22,7 @@
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bootstrap/css" />
           <root url="file://$MODULE_DIR$/vendor/bootstrap/js" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/css" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/less" />
@@ -27,11 +30,13 @@
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bootstrap/css" />
           <root url="file://$MODULE_DIR$/vendor/bootstrap/js" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/css" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/less" />
@@ -39,6 +44,7 @@
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/guzzle" />
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
           <root url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+          <root url="file://$MODULE_DIR$/vendor/psr/http-message" />
           <root url="file://$MODULE_DIR$/vendor/twig/twig" />
         </SOURCES>
       </library>

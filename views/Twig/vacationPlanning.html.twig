@@ -67,16 +67,16 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseExamplePages">
                     <li>
-                        <a href="../../views/login.html">Login Page</a>
+                        <a href="../login.html">Login Page</a>
                     </li>
                     <li>
-                        <a href="../../views/register.html">Registration Page</a>
+                        <a href="../register.html">Registration Page</a>
                     </li>
                     <li>
-                        <a href="../../views/forgot-password.html">Forgot Password Page</a>
+                        <a href="../forgot-password.html">Forgot Password Page</a>
                     </li>
                     <li>
-                        <a href="../../views/blankpage.html.twig">Blank Page</a>
+                        <a href="../blankpage.html.twig">Blank Page</a>
                     </li>
                 </ul>
             </li>
@@ -228,10 +228,15 @@
 
 
             <div class="container">
+                <h1>Planned Vacations</h1>
+                {%  if vacations is empty %}
+                No vacations planned
+                {% else %}
+
                 <table class="table table-hover">
                     <thread>
                         <tr>
-                            <th class="col-md-2">#</th>
+                            <th>#</th>
                             <th class="col-md-2">State</th>
                             <th class="col-md-2">Room</th>
                             <th class="col-md-2">Day</th>
@@ -240,12 +245,23 @@
                         </tr>
                     </thread>
                     <tbody>
+                    {% for vacation in vacations %}
                     <tr>
-                        <th></th>
-                        <td></td>
-
-                        <th></th>
-                        <td></td>
+                        <th scope="row">{{ vacation.Id }}</th>
+                        <td>
+                            {{ vacation.Room }}
+                        </td>
+                        <td>
+                            {{ vacation.Day }}
+                        </td>
+                        <td>
+                            {{ vacation.StartDate }}
+                        </td>
+                        <td>
+                            {{ vacation.EndDate }}
+                        </td>
+                        {% endfor %}
+                        {% endif %}
                     </tr>
                     </tbody>
                 </table>
@@ -372,7 +388,7 @@
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="../../views/login.html">Logout</a>
+                <a class="btn btn-primary" href="../login.html">Logout</a>
             </div>
         </div>
     </div>
