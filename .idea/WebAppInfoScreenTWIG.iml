@@ -22,6 +22,7 @@
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bootstrap/css" />
           <root url="file://$MODULE_DIR$/vendor/bootstrap/js" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/css" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/less" />
@@ -34,6 +35,7 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bootstrap/css" />
           <root url="file://$MODULE_DIR$/vendor/bootstrap/js" />
+          <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/css" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/fonts" />
           <root url="file://$MODULE_DIR$/vendor/font-awesome/less" />

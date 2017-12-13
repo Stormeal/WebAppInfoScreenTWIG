@@ -14,7 +14,7 @@ $response = $client->request(
     [
         'json' => [
 
-        ],
+        ]
     ]
 );
 require_once '../vendor/autoload.php';
@@ -25,8 +25,8 @@ $twig = new Twig_Environment($loader, array(
     'auto_reload' => true
 ));
 $template = $twig->loadTemplate('mancave.html.twig');
-$parametersToTwig = array("vegetables" => $response);
-echo $template->render($parametersToTwig);
+//$parametersToTwig = array("vegetables" => $response);
+//echo $template->render($parametersToTwig);
 $host = $_SERVER['HTTP_HOST'];
 header("Location: http://{$host}/WebAppInfoScreenTwig/controllers/caveLight.php");
 return;
